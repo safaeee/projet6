@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h4>infos des contacts</h4>
+            <div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Nom</label>
+                <!-- ng model les memes noms que dans l'interface -->
+                <input type="nom" [(ngModel)]="data.lastname" class="form-control" id="nom" placeholder="Nom">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Prénome</label>
+                <input type="prenom" [(ngModel)]="data.firstname" class="form-control" id="prenom" placeholder="prenom">
+              </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Téléphone</label>
+                <input type="tell" [(ngModel)]="data.phonenumber" class="form-control" id="tell" placeholder="Téléphone">
+              </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" [(ngModel)]="data.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                
+              </div>
+             <!-- onSubmit prend directement les var dans contact => iContact-->
+             <!-- <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" [(ngModel)]="data.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                
+              </div> -->
+              <table>
+                  <tr>
+       <td> <button type="submit"  class="d-block m-auto btn btn-primary" (click)="onSubmit(contact)">Ajouter</button></td>
+
+
+         <td><button type="submit"  class="d-block m-auto btn btn-primary" (click)="onEdit()">Modifier</button></td>   
+
+         <td><button type="submit"  class="d-block m-auto btn btn-primary" (click)="onDelete()">Supprimer</button></td>   
+        </tr>
+        </table>
+            </div>
+        </div>
+
+
+
+        <div class="col-6">
+            <h4>listes des contacts</h4>
+            <!-- <p>test</p> -->
+            <ul>
+                <ol *ngFor="let item of contacts">
+                    {{item.lastname}} {{item.firstname}} {{item.email}} {{item.phonenumber}}
+                </ol>
+            </ul>
+        </div>
+    </div>
+</div>

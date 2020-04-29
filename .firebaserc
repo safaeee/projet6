@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "projet1-1eca1": {
+      "hosting": {
+        "AcademicClassroom": [
+          "projet1-1eca1"
+        ]
+      }
+    }
+  }
+}
